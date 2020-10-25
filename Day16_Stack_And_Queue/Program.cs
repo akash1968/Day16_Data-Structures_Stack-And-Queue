@@ -12,18 +12,14 @@ namespace Day16_Stack_And_Queue
     {
         static void Main(string[] args)
         {
-            //UC-1-Create a Stack
-            //Creating an object of class LinkedListStackAndQueue
-            LinkedListStackAndQueue stack = new LinkedListStackAndQueue();
-            // Adding elements to Stack
-            stack.Push(56);
-            stack.Push(30);
-            stack.Push(70);
-            Console.WriteLine("Elements Present in the stack: ");
-            stack.Display();
-            //Peek and Pop from the Stack till the Stack is Empty
-            stack.IsEmpty();
-            stack.Display();
+           // UC_3- Ability to create a Queue
+            LinkedListQueue newQueue = new LinkedListQueue();
+            newQueue.Enqueue(56);
+            newQueue.Enqueue(30);
+            newQueue.Enqueue(70);
+            //Displaying the Queue
+            Console.WriteLine("Displaying Queue Elements: ");
+            newQueue.Display();
         }
     }
 }
