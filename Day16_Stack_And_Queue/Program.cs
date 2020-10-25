@@ -20,6 +20,11 @@ namespace Day16_Stack_And_Queue
             //Displaying the Queue
             Console.WriteLine("Displaying Queue Elements: ");
             newQueue.Display();
+            //UC_4- Ability to Dequeue from the Queue
+            newQueue.Dequeue();
+            //Displaying the Queue
+            Console.WriteLine("Displaying Queue Elements After Dequeue the first: ");
+            newQueue.Display();
         }
     }
 }

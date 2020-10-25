@@ -38,6 +38,20 @@ namespace Day16_Stack_And_Queue
             }
             Console.WriteLine("Inserted into the Queue "+ new_node.data);
         }
+        // UC4- Ability to dequeue from the beginning
+        public void Dequeue()
+        {
+            // if empty then return NULL.  
+            if (this.head == null)
+            {
+                Console.WriteLine("The Queue is empty");
+                return;
+            }
+           //Store previous head and move head pointer one step ahead to delete the current element
+            Node temp = this.head;
+            this.head = this.head.next;
+            Console.WriteLine("\nElement to be deleted from the queue = {0}", temp.data);
+        }
         public void Display()
         {
             // Creating a temporary node
