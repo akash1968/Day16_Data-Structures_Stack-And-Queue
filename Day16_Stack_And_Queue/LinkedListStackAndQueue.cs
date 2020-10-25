@@ -49,10 +49,47 @@ namespace Day16_Stack_And_Queue
                 while (temp != null)
                 {
                     Console.Write(temp.data + "  ");
+                    // moving the pointer to next node
                     temp = temp.next;
                 }
             }
-           
+        }
+        public void Peek()
+        {
+            //Returning the end condition when Stack is empty
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+                return;
+            }
+            //Displaying the value in the top of the stack
+            Console.WriteLine("\nValue in the top of the stack is = " + this.top.data);
+        }
+        // Popping from the Stack till the stack is empty        
+        public void Pop()
+        {
+            // Checking for the end condition till the Stack is Empty
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is Empty. Deletion is possible in the Stack");
+                return;
+            }
+            Console.WriteLine("Value to be popped is =" + this.top.data);
+            //Popping the node by reducing the nodes 
+            //Shorting the node by restoring the next node reference to current node
+            this.top = this.top.next;
+        }
+        // Popping till the Stack is empty and Peeking from the top element in the Stack
+        public void IsEmpty()
+        {
+            // Iterating till the entire stack is empty
+            while (this.top != null)
+            {
+                //Denoting the top element of the Stack
+                Peek();
+                //Popping the element from the Stack
+                Pop();
+            }
         }
     }
 }
