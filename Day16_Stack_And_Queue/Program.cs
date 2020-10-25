@@ -21,6 +21,9 @@ namespace Day16_Stack_And_Queue
             stack.Push(70);
             Console.WriteLine("Elements Present in the stack: ");
             stack.Display();
+            //Peek and Pop from the Stack till the Stack is Empty
+            stack.IsEmpty();
+            stack.Display();
         }
     }
 }
